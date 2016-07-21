@@ -13,9 +13,10 @@
 <?import javafx.scene.text.Font?>
 <?import java.net.URL?>
 
-<GridPane styleClass="background" alignment="center" hgap="10" prefHeight="305.0" prefWidth="486.0" vgap="10"
-          xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1"
-          fx:controller="Controller.LoginController">
+<GridPane xmlns:fx="http://javafx.com/fxml/1" styleClass="background" alignment="center" hgap="10" prefHeight="305.0"
+          prefWidth="486.0"
+          vgap="10" xmlns="http://javafx.com/javafx/null"
+          fx:controller="Controller.LoginController_OrderedArray">
     <columnConstraints>
         <ColumnConstraints/>
     </columnConstraints>

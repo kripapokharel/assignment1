@@ -1,20 +1,15 @@
 package Controller;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import Model.User;
-import Model.UserDB;
 import Model.UserIO;
 
 import java.io.IOException;
 
 import View.WelcomeJavaFXView;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
 import Model.*;
 import javafx.stage.FileChooser;
 
@@ -22,12 +17,14 @@ import java.io.File;
 
 import View.SignUpJavaFXView;
 import javafx.stage.FileChooser.*;
+import utils.LinkedListOrderedList;
+import Exception.IndexOutOfBoundException;
 
 
 /**
  * Created by kp26842 on 6/29/2016.
  */
-public class SignUpController {
+public class SignUpController_OrderedArray {
     @FXML
     TextField fname;
     @FXML
@@ -56,17 +53,20 @@ public class SignUpController {
     @FXML
     Label emailReuseError;
 
-    public void signUp() throws EmailException, PasswordException {
+    public void signUp() throws EmailException, PasswordException, IndexOutOfBoundException, IOException {
         EmailValidator emV = new EmailValidator();
         PasswordValidator pwV = new PasswordValidator();
 
+
         /*Validating email for its required format and letting user use only the unique email address*/
-        for (int i = 0; i < UserDB.getUsers().size(); i++) {
-            if (email.getText().equals(UserDB.getUsers().get(i).getUserName())) {
+        for (int i = 0; i < UserDB_OrderedArray.getUsers().size(); i++) {
+            if (email.getText().equals(UserDB_OrderedArray.getUsers().getE(i).getUserName())) {
                 emailReuseError.setVisible(true);
                 email.setId("button");
             }
+
         }
+
         if (emV.validate(email.getText())) {
             emailFormatError.setVisible(false);
         } else {
@@ -85,14 +85,15 @@ public class SignUpController {
         if (pwV.validate(pw.getText())) {
             if (pw.getText().equals(cpw.getText())) {
                 User user = new User(email.getText(), pw.getText());
-                UserDB.getUsers().add(user);
+                UserDB_OrderedArray.getUsers().add(user);
                 try {
-                    UserIO.writeUsers(UserDB.getUsers());
+                    UserIO.writeUsers(UserDB_OrderedArray.getUsers());
+
                 } catch (IOException e) {
 
+                    System.out.println(e.getStackTrace());
+                    System.err.println(UserDB_OrderedArray.getUsers());
 
-                    System.err.println(UserDB.getUsers());
-                    e.printStackTrace();
 
                 }
             } else {
@@ -106,24 +107,25 @@ public class SignUpController {
             pwformatError.setVisible(true);
             pw.setId("button");
         }
+        new WelcomeJavaFXView();
     }
 
-    /* public void clearText() {
-         ClearButton.setId("button");
-         email.clear();
-         pw.clear();
-         cpw.clear();
-         validationError.setVisible(false);
-         emailFormatError.setVisible(false);
-         pwformatError.setVisible(false);
-         emailReuseError.setVisible(false);
-         emptyFieldError.setVisible(false);
-         pw.setId("clearbutton");
-         email.setId("clearbutton");
-         ClearButton.setId("clearbutton");
+    public void clearText() {
+        ClearButton.setId("button");
+        email.clear();
+        pw.clear();
+        cpw.clear();
+        validationError.setVisible(false);
+        emailFormatError.setVisible(false);
+        pwformatError.setVisible(false);
+        emailReuseError.setVisible(false);
+        emptyFieldError.setVisible(false);
+        pw.setId("clearbutton");
+        email.setId("clearbutton");
+        ClearButton.setId("clearbutton");
 
-     }
- */
+    }
+
     public void openWelcomePage() throws Exception {
 
         new WelcomeJavaFXView();
@@ -136,6 +138,7 @@ public class SignUpController {
                 new ExtensionFilter("TextFiles", "*.text"),
                 new ExtensionFilter("Image Files", "*.jpg", "*.png"));
         File selectFile = fileChooser.showOpenDialog(SignUpJavaFXView.getSignUpStage());
+        System.out.println(selectFile.getPath());
 
 
     }

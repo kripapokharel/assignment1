@@ -12,9 +12,10 @@
 <?import javafx.scene.text.Font?>
 <?import java.net.URL ?>
 
-<Pane styleClass="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="657.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="Controller.SignUpController">
+<Pane xmlns:fx="http://javafx.com/fxml/1" styleClass="background" maxHeight="-Infinity" maxWidth="-Infinity"
+      minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="657.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/null"
+      fx:controller="Controller.SignUpController_OrderedArray">
     <children>
         <TextField fx:id="fname" layoutX="20.0" layoutY="203.0" prefHeight="35.0" prefWidth="230.0"
                    promptText="First Name"/>

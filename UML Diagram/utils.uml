@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>utils</OriginalElement>
+  <nodes>
+    <node x="1436.0" y="1186.0">utils.LinkedListStack</node>
+    <node x="350.5" y="0.0">utils.IIndexedList</node>
+    <node x="394.0" y="1915.0">utils.LinkedListQueue</node>
+    <node x="532.0" y="344.0">utils.LinkedListIndexedList</node>
+    <node x="518.0" y="1128.0">utils.LinkedListOrderedList</node>
+    <node x="0.0" y="322.0">utils.ArrayIndexedList</node>
+    <node x="487.5" y="1747.0">utils.ILinkedListQueue</node>
+    <node x="1041.0" y="1131.0">utils.ArrayStack</node>
+    <node x="1344.0" y="839.0">utils.IStack</node>
+    <node x="0.0" y="1117.0">utils.ArrayOrderedList</node>
+    <node x="109.0" y="1736.0">utils.IArrayQueue</node>
+    <node x="1150.5" y="1007.0">utils.IArrayStack</node>
+    <node x="293.25" y="1590.0">utils.IQueue</node>
+    <node x="768.0" y="1590.0">utils.LinkedListNode</node>
+    <node x="0.0" y="1860.0">utils.ArrayQueue</node>
+    <node x="1549.5" y="1018.0">utils.ILinkedListStack</node>
+    <node x="365.0" y="839.0">utils.IList</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="utils.ArrayQueue" target="utils.IArrayQueue">
+      <point x="0.0" y="-159.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="utils.ILinkedListQueue" target="utils.IQueue">
+      <point x="0.0" y="-26.0" />
+      <point x="558.5" y="1711.0" />
+      <point x="412.5" y="1711.0" />
+      <point x="39.75" y="48.0" />
+    </edge>
+    <edge source="utils.IArrayStack" target="utils.IStack">
+      <point x="0.0" y="-37.0" />
+      <point x="1228.5" y="982.0" />
+      <point x="1381.75" y="982.0" />
+      <point x="-37.75" y="59.0" />
+    </edge>
+    <edge source="utils.LinkedListOrderedList" target="utils.IList">
+      <point x="0.0" y="-203.0" />
+      <point x="757.0" y="1092.0" />
+      <point x="572.0" y="1092.0" />
+      <point x="69.0" y="114.0" />
+    </edge>
+    <edge source="utils.LinkedListQueue" target="utils.ILinkedListQueue">
+      <point x="0.0" y="-104.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="utils.LinkedListIndexedList" target="utils.IIndexedList">
+      <point x="0.0" y="-214.0" />
+      <point x="781.0" y="297.0" />
+      <point x="602.5" y="297.0" />
+      <point x="84.0" y="136.0" />
+    </edge>
+    <edge source="utils.ArrayStack" target="utils.IArrayStack">
+      <point x="0.0" y="-170.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="utils.ILinkedListStack" target="utils.IStack">
+      <point x="0.0" y="-26.0" />
+      <point x="1610.5" y="982.0" />
+      <point x="1457.25" y="982.0" />
+      <point x="37.75" y="59.0" />
+    </edge>
+    <edge source="utils.ArrayOrderedList" target="utils.IList">
+      <point x="0.0" y="-214.0" />
+      <point x="249.0" y="1092.0" />
+      <point x="434.0" y="1092.0" />
+      <point x="-69.0" y="114.0" />
+    </edge>
+    <edge source="utils.LinkedListStack" target="utils.ILinkedListStack">
+      <point x="0.0" y="-115.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="utils.IArrayQueue" target="utils.IQueue">
+      <point x="0.0" y="-37.0" />
+      <point x="187.0" y="1711.0" />
+      <point x="333.0" y="1711.0" />
+      <point x="-39.75" y="48.0" />
+    </edge>
+    <edge source="utils.ArrayIndexedList" target="utils.IIndexedList">
+      <point x="0.0" y="-236.0" />
+      <point x="256.0" y="297.0" />
+      <point x="434.5" y="297.0" />
+      <point x="-84.0" y="136.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.1842584167424932" x="892.5" y="1089.0" />
+  <SelectedNodes>
+    <node>utils.ILinkedListStack</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

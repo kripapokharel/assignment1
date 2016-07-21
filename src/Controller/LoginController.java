@@ -1,15 +1,16 @@
 package Controller;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
-import javafx.stage.Stage;
 import View.SignUpJavaFXView;
 import Model.UserDB;
 
 import javafx.fxml.FXML;
+
+/**
+ * Created by Kripa Pokharel
+ * on 7/06/2016
+ */
 
 public class LoginController {
     @FXML
@@ -26,8 +27,6 @@ public class LoginController {
             }
         }
 
-/*<stylesheet>
-* <URL */
 
     }
 

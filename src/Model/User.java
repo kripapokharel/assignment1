@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by kp26842 on 6/30/2016.
  */
-public class User extends Person implements Serializable {
+public class User extends Person implements Serializable, Comparable<User> {
     String userName;
     String email;
     String phoneNo;
@@ -27,16 +27,29 @@ public class User extends Person implements Serializable {
         this.userName = userName;
     }
 
+
     public String getPhoneNo() {
         return phoneNo;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
     }
 
     public String getPassWord() {
         return passWord;
     }
 
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+
     public String getProfilePic() {
         return profilePic;
+    }
+
+    public void setProfilePic(String profilePic) {
+        this.profilePic = profilePic;
     }
 
     public String getUserName() {
@@ -44,19 +57,14 @@ public class User extends Person implements Serializable {
         return userName;
     }
 
-    public String getDOB() {
-
-        return DOB;
-    }
-
-    public String getEmail() {
-
-        return email;
-    }
-
     public void setUserName(String userName) {
 
         this.userName = userName;
+    }
+
+    public String getDOB() {
+
+        return DOB;
     }
 
     public void setDOB(String DOB) {
@@ -64,24 +72,43 @@ public class User extends Person implements Serializable {
         this.DOB = DOB;
     }
 
+    public String getEmail() {
+
+        return email;
+    }
+
     public void setEmail(String email) {
 
         this.email = email;
     }
 
-    public void setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
-    }
-
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
-    }
-
-    public void setProfilePic(String profilePic) {
-        this.profilePic = profilePic;
-    }
-
     public void setConfirmPassword(String confirmPassword) {
         this.confirmPassword = confirmPassword;
     }
+
+
+    @Override
+    public int compareTo(User user) {
+        return (this.userName.compareTo(user.userName));
+
+    }
+
+   /* @Override
+    public boolean equals(User user){
+        return false;
+    }*/
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userName='" + userName + '\'' +
+                ", email='" + email + '\'' +
+                ", phoneNo='" + phoneNo + '\'' +
+                ", passWord='" + passWord + '\'' +
+                ", profilePic='" + profilePic + '\'' +
+                ", confirmPassword='" + confirmPassword + '\'' +
+                '}';
+    }
 }
+
+

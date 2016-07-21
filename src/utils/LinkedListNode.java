@@ -4,10 +4,15 @@ package utils;
  * Created by usa on 7/6/2016.
  */
 public class LinkedListNode<T> {
-    private T element;
     LinkedListNode pointer;
+    private T element;
 
     public LinkedListNode(T element) {
+        this.element = element;
+        this.pointer = null;
+    }
+
+    public LinkedListNode() {
         this.element = element;
         this.pointer = null;
     }
@@ -21,12 +26,12 @@ public class LinkedListNode<T> {
         return element;
     }
 
-    public LinkedListNode getPointer() {
-        return pointer;
-    }
-
     public void setElement(T element) {
         this.element = element;
+    }
+
+    public LinkedListNode getPointer() {
+        return pointer;
     }
 
     public void setPointer(LinkedListNode pointer) {

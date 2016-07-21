@@ -1,15 +1,17 @@
 package utils;
 
+import Exception.UnderflowException;
+
 /**
  * Created by usa on 7/6/2016.
  */
 public interface IStack<T> {
-    public T top();
+    T top() throws UnderflowException;
 
-    public T pop();
+    void pop() throws UnderflowException;
 
-    public void push(T element);
+    boolean isEmpty();
 
-    public boolean isEmpty();
+    int size();
 
 }

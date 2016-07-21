@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Controller</OriginalElement>
+  <nodes>
+    <node x="0.0" y="878.0">Controller.WelcomeController</node>
+    <node x="0.0" y="0.0">Controller.SignUpController_OrderedArray</node>
+    <node x="0.0" y="450.0">Controller.SignUpController</node>
+    <node x="484.0" y="450.0">Controller.LoginController_OrderedArray</node>
+    <node x="731.0" y="450.0">Controller.LoginController</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="0.5263157894736842" x="466.5" y="465.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
